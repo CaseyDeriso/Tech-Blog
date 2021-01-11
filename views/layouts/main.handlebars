@@ -6,6 +6,27 @@
   <title>Tech blog</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/">Tech-Blog</a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/">dashboard</a>
+        <button id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        <a href="/signup">sign up</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
 </body>
 </html>
