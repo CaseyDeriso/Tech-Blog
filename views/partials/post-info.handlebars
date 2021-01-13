@@ -1,0 +1,11 @@
+<article>
+  <div>
+    <h2>{{title}}</h2>
+    <p>{{post_content}}</p>
+  </div>
+  <div>
+    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+    |
+    <a href="/posts/{{id}}">{{comments.length}} {{format_plural 'comment' comments.length}}</a>
+  </div>
+</article>
