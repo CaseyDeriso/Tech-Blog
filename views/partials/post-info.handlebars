@@ -1,11 +1,15 @@
-<article>
-  <div>
-    <h2>{{title}}</h2>
-    <p>{{post_content}}</p>
+<div class="container">
+  <h4 class="header center-align">{{title}}</h4>
+  <div class="card horizontal ">
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>{{post_content}}</p>
+      </div>
+      <div class="card-action">
+        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+        |
+        <a href="/posts/{{id}}">{{comments.length}} {{format_plural 'comment' comments.length}}</a>
+      </div>
+    </div>
   </div>
-  <div>
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
-    |
-    <a href="/posts/{{id}}">{{comments.length}} {{format_plural 'comment' comments.length}}</a>
-  </div>
-</article>
+</div>

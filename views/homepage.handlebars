@@ -1,7 +1,9 @@
-<ol>
-  {{#each posts as |post|}}
-  <li>
-    {{> post-info post}}
-  </li>
-  {{/each}}
-</ol>
+<div class="container row">
+  <ul class="col s12">
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,9 +1,11 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
+<form class=" container comment-form col s10">
+    <div class="input-field">
+        <textarea class="materialize-textarea" name="comment-body"></textarea>
+        <label for="comment-body">type yo comment</label>
+
     </div>
     <div>
         <button type="submit">add comment</button>
