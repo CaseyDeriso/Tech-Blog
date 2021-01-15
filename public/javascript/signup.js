@@ -18,6 +18,21 @@ async function signupFormHandler(event) {
     // check the response data
     if (response.ok) {
       console.log("success");
+      // login
+      const response2 = await fetch("/api/users/login", {
+        method: "post",
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+  
+      if (response2.ok) {
+        document.location.replace("/");
+      } else {
+        alert(response2.statusText);
+      }
     } else {
       alert(response);
     }

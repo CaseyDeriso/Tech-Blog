@@ -6,21 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
   <link rel="stylesheet" href="/CSS/materialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
   <nav class="top-nav">
     <div class="nav-wrapper">
       <h1 style="margin: 0">
-        <a href="/" class="left brand-logo">Tech-Blog</a>
+        <a href="/" class="left-align brand-logo">Tech-Blog</a>
       </h1>
-      <ul id="nav-mobile" class="right hide-on-down">
+      <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
         {{#if loggedIn}}
         <li> <a href="/dashboard">dashboard</a>
         </li>
         <li> <a id="logout">logout</a>
         </li>
-        <script type="text/css" src="/javascript/logout.js" defer></script>
+        <script type="text/javascript" src="/javascript/logout.js" defer></script>
         {{else}}
         <li> <a href="/login">login</a>
         </li>
@@ -30,6 +33,20 @@
       </ul>
     </div>
   </nav>
+    <ul class="sidenav" id="mobile-demo">
+        {{#if loggedIn}}
+        <li> <a href="/dashboard">dashboard</a>
+        </li>
+        <li> <a id="logout">logout</a>
+        </li>
+        <script type="text/javascript" src="/javascript/logout.js" defer></script>
+        {{else}}
+        <li> <a href="/login">login</a>
+        </li>
+        <li> <a href="/signup">sign up</a>
+        </li>
+        {{/if}}
+  </ul>
   <main>
     {{{ body }}}
   </main>

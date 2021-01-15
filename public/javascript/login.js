@@ -1,10 +1,9 @@
-async function loginFormHandler(event) {
+async function loginFormHandler(event, email, password) {
   event.preventDefault();
-
+  if (!email && !password) {
   const email = document.querySelector("#email-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
-
-  if (email && password) {
+  } else {
     const response = await fetch("/api/users/login", {
       method: "post",
       body: JSON.stringify({

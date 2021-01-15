@@ -1,6 +1,7 @@
 const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
 const router = require("express").Router();
+const logout = require("../public/javascript/logout")
 
 router.get("/", (req, res) => {
   Post.findAll({

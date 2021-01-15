@@ -1,36 +1,49 @@
 <section>
   <div class="row">
     <div class="container s10">
-    <h2>Create New Post</h2>
-    <form class="col s12 new-post-form">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="post-title" type="text">
-          <label for="password">Title</label>
+      <h3>Create New Post</h3>
+      <form class="col s12 new-post-form">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="post-title" type="text">
+            <label for="password">Title</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="post-content" name="post-content" class="materialize-textarea"></textarea>
-          <label for="textarea1">Content</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="post-content" name="post-content" class="materialize-textarea"></textarea>
+            <label for="textarea1">Content</label>
+          </div>
         </div>
-      </div>
-      <button type="submit">Create</button>
-    </form>    </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Create
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
   </div>
 
 </section>
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
+  <div class="row">
+    <div class="container s10">
+      <h2 class="center-align" style="">Your Posts:</h2>
+      <ul>
+        {{#each posts as |post|}}
+        <li>
+          {{> post-info post}}
+          <div class="container">
+            <a href="/dashboard/edit/{{post.id}}" class="center-align">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Edit post
+                <i class="material-icons right">create</i>
+          </div>
+          </button></a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
 </section>
 {{/if}}
 <script src="/javascript/add-post.js"></script>
