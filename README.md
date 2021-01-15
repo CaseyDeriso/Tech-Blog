@@ -23,7 +23,7 @@ This project is depoyed to heroku. If you with to deploy it locally, Node.js and
 Post short blogs, comment on other users blog posts, and upvote other posts to contribute to this CMS!
 
 ## Screenshot
-![Screenshot of Application](./public/images/screenshot.jpg)
+![Screenshot of Application](./public/images/screenshot.png)
       
 
 ## Credits
