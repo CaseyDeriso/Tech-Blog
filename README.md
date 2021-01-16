@@ -12,6 +12,7 @@ Tech Blog is a blog-style CMS. It is a full stack application built on Node.js. 
 * [usage](#usage)
 * [screenshot](#screenshot)
 * [credits](#credits)
+* [deployed application](#deployment)
 
 
 ## Installation 
@@ -30,6 +31,6 @@ Post short blogs, comment on other users blog posts, and upvote other posts to c
 
 UT Coding Bootcamp
 
-## License 
+## Deployment
 
-
+[link to deployed application](https://guarded-escarpment-07152.herokuapp.com/)
