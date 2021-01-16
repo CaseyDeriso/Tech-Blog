@@ -7,6 +7,7 @@
   <title>Tech Blog</title>
   <link rel="stylesheet" href="/CSS/materialize.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -33,19 +34,19 @@
       </ul>
     </div>
   </nav>
-    <ul class="sidenav" id="mobile-demo">
-        {{#if loggedIn}}
-        <li> <a href="/dashboard">dashboard</a>
-        </li>
-        <li> <a id="logout">logout</a>
-        </li>
-        <script type="text/javascript" src="/javascript/logout.js" defer></script>
-        {{else}}
-        <li> <a href="/login">login</a>
-        </li>
-        <li> <a href="/signup">sign up</a>
-        </li>
-        {{/if}}
+  <ul class="sidenav" id="mobile-demo">
+    {{#if loggedIn}}
+    <li> <a href="/dashboard">dashboard</a>
+    </li>
+    <li> <a id="logout">logout</a>
+    </li>
+    <script type="text/javascript" src="/javascript/logout.js" defer></script>
+    {{else}}
+    <li> <a href="/login">login</a>
+    </li>
+    <li> <a href="/signup">sign up</a>
+    </li>
+    {{/if}}
   </ul>
   <main>
     {{{ body }}}
